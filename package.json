@@ -11,10 +11,10 @@
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/biati-digital/nova-text-tools.git"
+    "url": "https://github.com/biati-digital/vscode-text-tools.git"
   },
   "bugs": {
-    "url": "https://github.com/biati-digital/nova-text-tools/issues"
+    "url": "https://github.com/biati-digital/vscode-text-tools/issues"
   },
   "engines": {
     "vscode": "^1.46.0"
