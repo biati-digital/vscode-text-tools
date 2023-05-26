@@ -1,0 +1,888 @@
+{
+  "name": "vscode-text-tools",
+  "displayName": "Text Tools for VS Code",
+  "description": "Swiss Army knife for text manipulation and selection",
+  "version": "1.1.0",
+  "publisher": "biati",
+  "author": {
+    "name": "Biati Digital",
+    "url": "https://www.biati.com.mx"
+  },
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biati-digital/nova-text-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/biati-digital/nova-text-tools/issues"
+  },
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:biati.texttools.tolowercase",
+    "onCommand:biati.texttools.touppercase",
+    "onCommand:biati.texttools.tocapitalcase",
+    "onCommand:biati.texttools.tocamelcase",
+    "onCommand:biati.texttools.tosnakecase",
+    "onCommand:biati.texttools.toconstantcase",
+    "onCommand:biati.texttools.topascalsnakecase",
+    "onCommand:biati.texttools.tocamelsnakecase",
+    "onCommand:biati.texttools.toconstantcase",
+    "onCommand:biati.texttools.todotcase",
+    "onCommand:biati.texttools.toheadercase",
+    "onCommand:biati.texttools.toheadercase",
+    "onCommand:biati.texttools.tonocase",
+    "onCommand:biati.texttools.toflatcase",
+    "onCommand:biati.texttools.toparamcase",
+    "onCommand:biati.texttools.toscreamingparamcase",
+    "onCommand:biati.texttools.topascalcase",
+    "onCommand:biati.texttools.topathcase",
+    "onCommand:biati.texttools.tosentencecase",
+    "onCommand:biati.texttools.tospongececase",
+    "onCommand:biati.texttools.totitlecase",
+    "onCommand:biati.texttools.tobase64",
+    "onCommand:biati.texttools.decodebase64",
+    "onCommand:biati.texttools.urlencode",
+    "onCommand:biati.texttools.urldecode",
+    "onCommand:biati.texttools.encodespaces",
+    "onCommand:biati.texttools.decodespaces",
+    "onCommand:biati.texttools.encodehtml",
+    "onCommand:biati.texttools.decodehtml",
+    "onCommand:biati.texttools.htmlasciitodecimal",
+    "onCommand:biati.texttools.texttobinary",
+    "onCommand:biati.texttools.binarytotext",
+    "onCommand:biati.texttools.asciitodecimal",
+    "onCommand:biati.texttools.asciitohex",
+    "onCommand:biati.texttools.rot13",
+    "onCommand:biati.texttools.stripslashes",
+    "onCommand:biati.texttools.smartquotes",
+    "onCommand:biati.texttools.straightenquotes",
+    "onCommand:biati.texttools.quotessingletodouble",
+    "onCommand:biati.texttools.quotessingletobackticks",
+    "onCommand:biati.texttools.quotesdoubletosingle",
+    "onCommand:biati.texttools.quotesdoubletobackticks",
+    "onCommand:biati.texttools.sortalphanumerically",
+    "onCommand:biati.texttools.sortalphanumericallyreverse",
+    "onCommand:biati.texttools.sortbylength",
+    "onCommand:biati.texttools.sortbylengthreverse",
+    "onCommand:biati.texttools.reverselines",
+    "onCommand:biati.texttools.randomlines",
+    "onCommand:biati.texttools.joinlines",
+    "onCommand:biati.texttools.splittolines",
+    "onCommand:biati.texttools.deleteduplicates",
+    "onCommand:biati.texttools.deleteemptylines",
+    "onCommand:biati.texttools.deletelinesmatching",
+    "onCommand:biati.texttools.filterduplucates",
+    "onCommand:biati.texttools.filterduplucatesnew",
+    "onCommand:biati.texttools.filteruniques",
+    "onCommand:biati.texttools.filteruniquesnew",
+    "onCommand:biati.texttools.filterlinesmatching",
+    "onCommand:biati.texttools.filterlinesmatchingnew",
+    "onCommand:biati.texttools.selectlinesmatching",
+    "onCommand:biati.texttools.selectallocurrencesmatching",
+    "onCommand:biati.texttools.selectocurrences",
+    "onCommand:biati.texttools.expandselection",
+    "onCommand:biati.texttools.shrinkselection",
+    "onCommand:biati.texttools.alignselection",
+    "onCommand:biati.texttools.wrapeachlinewith",
+    "onCommand:biati.texttools.addlinesnumber",
+    "onCommand:biati.texttools.appendtolines",
+    "onCommand:biati.texttools.prependtolines",
+    "onCommand:biati.texttools.nonbreakingspace",
+    "onCommand:biati.texttools.addallnumbers",
+    "onCommand:biati.texttools.substractallnumbers",
+    "onCommand:biati.texttools.jsonstringparse",
+    "onCommand:biati.texttools.generateuuid",
+    "onCommand:biati.texttools.generatedummyfile",
+    "onCommand:biati.texttools.countwords",
+    "onCommand:biati.texttools.countcharacters",
+    "onCommand:biati.texttools.countlines"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "title": "Make Lower Case",
+        "command": "biati.texttools.tolowercase"
+      },
+      {
+        "title": "Make Upper Case",
+        "command": "biati.texttools.touppercase"
+      },
+      {
+        "title": "Make Capital Case",
+        "command": "biati.texttools.tocapitalcase"
+      },
+      {
+        "title": "Make Camel Case",
+        "command": "biati.texttools.tocamelcase"
+      },
+      {
+        "title": "Make Snake Case",
+        "command": "biati.texttools.tosnakecase"
+      },
+      {
+        "title": "Make Screaming Snake Case",
+        "command": "biati.texttools.toconstantcase"
+      },
+      {
+        "title": "Make Pascal Snake Case",
+        "command": "biati.texttools.topascalsnakecase"
+      },
+      {
+        "title": "Make Camel Snake Case",
+        "command": "biati.texttools.tocamelsnakecase"
+      },
+      {
+        "title": "Make Constant Case",
+        "command": "biati.texttools.toconstantcase"
+      },
+      {
+        "title": "Make Dot Case",
+        "command": "biati.texttools.todotcase"
+      },
+      {
+        "title": "Make Header Case",
+        "command": "biati.texttools.toheadercase"
+      },
+      {
+        "title": "Make Train Case",
+        "command": "biati.texttools.toheadercase"
+      },
+      {
+        "title": "Make No Case",
+        "command": "biati.texttools.tonocase"
+      },
+      {
+        "title": "Make Flat Case",
+        "command": "biati.texttools.toflatcase"
+      },
+      {
+        "title": "Make Kebab Case",
+        "command": "biati.texttools.toparamcase"
+      },
+      {
+        "title": "Make Screaming Kebab Case",
+        "command": "biati.texttools.toscreamingparamcase"
+      },
+      {
+        "title": "Make Pascal Case",
+        "command": "biati.texttools.topascalcase"
+      },
+      {
+        "title": "Make Path Case",
+        "command": "biati.texttools.topathcase"
+      },
+      {
+        "title": "Make Sentence Case",
+        "command": "biati.texttools.tosentencecase"
+      },
+      {
+        "title": "Make Sponge Case",
+        "command": "biati.texttools.tospongececase"
+      },
+      {
+        "title": "Make Title Case",
+        "command": "biati.texttools.totitlecase"
+      },
+      {
+        "title": "Base64 Encode",
+        "command": "biati.texttools.tobase64"
+      },
+      {
+        "title": "Base64 Decode",
+        "command": "biati.texttools.decodebase64"
+      },
+      {
+        "title": "URL Encode",
+        "command": "biati.texttools.urlencode"
+      },
+      {
+        "title": "URL Decode",
+        "command": "biati.texttools.urldecode"
+      },
+      {
+        "title": "Encode Spaces",
+        "command": "biati.texttools.encodespaces"
+      },
+      {
+        "title": "Decode Spaces",
+        "command": "biati.texttools.decodespaces"
+      },
+      {
+        "title": "Encode HTML Entities",
+        "command": "biati.texttools.encodehtml"
+      },
+      {
+        "title": "Decode HTML Entities",
+        "command": "biati.texttools.decodehtml"
+      },
+      {
+        "title": "HTML to Decimal Entities",
+        "command": "biati.texttools.htmlasciitodecimal"
+      },
+      {
+        "title": "Text to Binary",
+        "command": "biati.texttools.texttobinary"
+      },
+      {
+        "title": "Binary to Text",
+        "command": "biati.texttools.binarytotext"
+      },
+      {
+        "title": "ASCII to Decimal",
+        "command": "biati.texttools.asciitodecimal"
+      },
+      {
+        "title": "ASCII to Hex",
+        "command": "biati.texttools.asciitohex"
+      },
+      {
+        "title": "ROT13",
+        "command": "biati.texttools.rot13"
+      },
+      {
+        "title": "Strip Slashes",
+        "command": "biati.texttools.stripslashes"
+      },
+      {
+        "title": "Smart Quotes",
+        "command": "biati.texttools.smartquotes"
+      },
+      {
+        "title": "Straighten Quotes",
+        "command": "biati.texttools.straightenquotes"
+      },
+      {
+        "title": "Single Quotes to Double Quotes",
+        "command": "biati.texttools.quotessingletodouble"
+      },
+      {
+        "title": "Single Quotes to Backticks",
+        "command": "biati.texttools.quotessingletobackticks"
+      },
+      {
+        "title": "Double Quotes to Single Quotes",
+        "command": "biati.texttools.quotesdoubletosingle"
+      },
+      {
+        "title": "Double Quotes to Backticks",
+        "command": "biati.texttools.quotesdoubletobackticks"
+      },
+      {
+        "title": "Sort Lines Alphanumerically",
+        "command": "biati.texttools.sortalphanumerically"
+      },
+      {
+        "title": "Sort Lines Alphanumerically Reverse",
+        "command": "biati.texttools.sortalphanumericallyreverse"
+      },
+      {
+        "title": "Sort Lines by Length",
+        "command": "biati.texttools.sortbylength"
+      },
+      {
+        "title": "Sort Lines by Length Reverse",
+        "command": "biati.texttools.sortbylengthreverse"
+      },
+      {
+        "title": "Reverse Lines",
+        "command": "biati.texttools.reverselines"
+      },
+      {
+        "title": "Randomize Lines",
+        "command": "biati.texttools.randomlines"
+      },
+      {
+        "title": "Join Lines with Delimiter",
+        "command": "biati.texttools.joinlines"
+      },
+      {
+        "title": "Split Text to Lines",
+        "command": "biati.texttools.splittolines"
+      },
+      {
+        "title": "Delete Duplicate Lines",
+        "command": "biati.texttools.deleteduplicates"
+      },
+      {
+        "title": "Delete Empty Lines",
+        "command": "biati.texttools.deleteemptylines"
+      },
+      {
+        "title": "Delete Lines Matching...",
+        "command": "biati.texttools.deletelinesmatching"
+      },
+      {
+        "title": "Filter Duplicate Lines",
+        "command": "biati.texttools.filterduplucates"
+      },
+      {
+        "title": "Filter Duplicate Lines As New Document",
+        "command": "biati.texttools.filterduplucatesnew"
+      },
+      {
+        "title": "Filter Unique Lines",
+        "command": "biati.texttools.filteruniques"
+      },
+      {
+        "title": "Filter Unique Lines As New Document",
+        "command": "biati.texttools.filteruniquesnew"
+      },
+      {
+        "title": "Filter Lines Matching...",
+        "command": "biati.texttools.filterlinesmatching"
+      },
+      {
+        "title": "Filter Lines Matching as New Document",
+        "command": "biati.texttools.filterlinesmatchingnew"
+      },
+      {
+        "title": "Select Lines Matching...",
+        "paletteTitle": "Select Lines Matching...",
+        "command": "biati.texttools.selectlinesmatching",
+        "when": "editorHasFocus"
+      },
+      {
+        "title": "Select Ocurrences Matching...",
+        "command": "biati.texttools.selectallocurrencesmatching"
+      },
+      {
+        "title": "Selection Expand",
+        "command": "biati.texttools.expandselection",
+        "shortcut": "ctrl-opt-right"
+      },
+      {
+        "title": "Selection Shrink",
+        "command": "biati.texttools.shrinkselection",
+        "shortcut": "ctrl-opt-left"
+      },
+      {
+        "title": "Selection Align",
+        "command": "biati.texttools.alignselection",
+        "shortcut": "cmd-opt-a"
+      },
+      {
+        "title": "Wrap Each Line With...",
+        "command": "biati.texttools.wrapeachlinewith"
+      },
+      {
+        "title": "Add Lines Number",
+        "command": "biati.texttools.addlinesnumber"
+      },
+      {
+        "title": "Add Text At Beginning of Lines",
+        "command": "biati.texttools.appendtolines"
+      },
+      {
+        "title": "Add Text At Ends of Lines",
+        "command": "biati.texttools.prependtolines"
+      },
+      {
+        "title": "Insert Non-breaking Space",
+        "command": "biati.texttools.nonbreakingspace"
+      },
+      {
+        "title": "Add All Numbers",
+        "command": "biati.texttools.addallnumbers"
+      },
+      {
+        "title": "Substract All Numbers",
+        "command": "biati.texttools.substractallnumbers"
+      },
+      {
+        "title": "JSON String Parse",
+        "command": "biati.texttools.jsonstringparse"
+      },
+      {
+        "title": "Generate UUID",
+        "command": "biati.texttools.generateuuid"
+      },
+      {
+        "title": "Generate Dummy File",
+        "command": "biati.texttools.generatedummyfile"
+      },
+      {
+        "title": "Count Words",
+        "command": "biati.texttools.countwords"
+      },
+      {
+        "title": "Count Characters",
+        "command": "biati.texttools.countcharacters"
+      },
+      {
+        "title": "Count Lines",
+        "command": "biati.texttools.countlines"
+      }
+    ],
+    "menus": {
+      "text-tools": [
+        {
+          "command": "biati.texttools.tolowercase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.touppercase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tocapitalcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tocamelcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tosnakecase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toconstantcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.topascalsnakecase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tocamelsnakecase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toconstantcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.todotcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toheadercase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toheadercase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tonocase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toflatcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toparamcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.toscreamingparamcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.topascalcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.topathcase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tosentencecase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tospongececase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.totitlecase",
+          "when": "editorTextFocus",
+          "group": "1_casetools"
+        },
+        {
+          "command": "biati.texttools.tobase64",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.decodebase64",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.urlencode",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.urldecode",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.encodespaces",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.decodespaces",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.encodehtml",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.decodehtml",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.htmlasciitodecimal",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.texttobinary",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.binarytotext",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.asciitodecimal",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.asciitohex",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.rot13",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.stripslashes",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.smartquotes",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.straightenquotes",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.quotessingletodouble",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.quotessingletobackticks",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.quotesdoubletosingle",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.quotesdoubletobackticks",
+          "when": "editorTextFocus",
+          "group": "2_transformtools"
+        },
+        {
+          "command": "biati.texttools.sortalphanumerically",
+          "when": "editorTextFocus",
+          "group": "3_sorttools"
+        },
+        {
+          "command": "biati.texttools.sortalphanumericallyreverse",
+          "when": "editorTextFocus",
+          "group": "3_sorttools"
+        },
+        {
+          "command": "biati.texttools.sortbylength",
+          "when": "editorTextFocus",
+          "group": "3_sorttools"
+        },
+        {
+          "command": "biati.texttools.sortbylengthreverse",
+          "when": "editorTextFocus",
+          "group": "3_sorttools"
+        },
+        {
+          "command": "biati.texttools.reverselines",
+          "when": "editorTextFocus",
+          "group": "4_linestools"
+        },
+        {
+          "command": "biati.texttools.randomlines",
+          "when": "editorTextFocus",
+          "group": "4_linestools"
+        },
+        {
+          "command": "biati.texttools.joinlines",
+          "when": "editorTextFocus",
+          "group": "4_linestools"
+        },
+        {
+          "command": "biati.texttools.splittolines",
+          "when": "editorTextFocus",
+          "group": "4_linestools"
+        },
+        {
+          "command": "biati.texttools.deleteduplicates",
+          "when": "editorTextFocus",
+          "group": "5_deletetools"
+        },
+        {
+          "command": "biati.texttools.deleteemptylines",
+          "when": "editorTextFocus",
+          "group": "5_deletetools"
+        },
+        {
+          "command": "biati.texttools.deletelinesmatching",
+          "when": "editorTextFocus",
+          "group": "5_deletetools"
+        },
+        {
+          "command": "biati.texttools.filterduplucates",
+          "when": "editorTextFocus",
+          "group": "6_filtertools"
+        },
+        {
+          "command": "biati.texttools.filterduplucatesnew",
+          "when": "editorTextFocus",
+          "group": "6_filtertools"
+        },
+        {
+          "command": "biati.texttools.filteruniques",
+          "when": "editorTextFocus",
+          "group": "6_filtertools"
+        },
+        {
+          "command": "biati.texttools.filteruniquesnew",
+          "when": "editorTextFocus",
+          "group": "6_filtertools"
+        },
+        {
+          "command": "biati.texttools.filterlinesmatching",
+          "when": "editorTextFocus",
+          "group": "6_filtertools"
+        },
+        {
+          "command": "biati.texttools.filterlinesmatchingnew",
+          "when": "editorTextFocus",
+          "group": "6_filtertools"
+        },
+        {
+          "command": "biati.texttools.selectlinesmatching",
+          "when": "editorTextFocus",
+          "group": "7_selecttools"
+        },
+        {
+          "command": "biati.texttools.selectallocurrencesmatching",
+          "when": "editorTextFocus",
+          "group": "7_selecttools"
+        },
+        {
+          "command": "biati.texttools.expandselection",
+          "when": "editorTextFocus",
+          "group": "7_selecttools"
+        },
+        {
+          "command": "biati.texttools.shrinkselection",
+          "when": "editorTextFocus",
+          "group": "7_selecttools"
+        },
+        {
+          "command": "biati.texttools.alignselection",
+          "when": "editorTextFocus",
+          "group": "7_selecttools"
+        },
+        {
+          "command": "biati.texttools.wrapeachlinewith",
+          "when": "editorTextFocus",
+          "group": "8_linesmodstools"
+        },
+        {
+          "command": "biati.texttools.addlinesnumber",
+          "when": "editorTextFocus",
+          "group": "8_linesmodstools"
+        },
+        {
+          "command": "biati.texttools.appendtolines",
+          "when": "editorTextFocus",
+          "group": "8_linesmodstools"
+        },
+        {
+          "command": "biati.texttools.prependtolines",
+          "when": "editorTextFocus",
+          "group": "8_linesmodstools"
+        },
+        {
+          "command": "biati.texttools.countwords",
+          "when": "editorTextFocus",
+          "group": "9_countertools@1"
+        },
+        {
+          "command": "biati.texttools.countcharacters",
+          "when": "editorTextFocus",
+          "group": "9_countertools@2"
+        },
+        {
+          "command": "biati.texttools.countlines",
+          "when": "editorTextFocus",
+          "group": "9_countertools@3"
+        },
+        {
+          "command": "biati.texttools.nonbreakingspace",
+          "when": "editorTextFocus",
+          "group": "9_inserttools"
+        },
+        {
+          "command": "biati.texttools.addallnumbers",
+          "when": "editorTextFocus",
+          "group": "9_inserttools"
+        },
+        {
+          "command": "biati.texttools.substractallnumbers",
+          "when": "editorTextFocus",
+          "group": "9_inserttools"
+        },
+        {
+          "command": "biati.texttools.jsonstringparse",
+          "when": "editorTextFocus",
+          "group": "9_inserttools"
+        },
+        {
+          "command": "biati.texttools.generateuuid",
+          "when": "editorTextFocus",
+          "group": "9_inserttools"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "text-tools",
+          "group": "1_modification@11"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "label": "Text Tools",
+        "id": "text-tools"
+      }
+    ]
+  },
+  "keywords": [
+    "text",
+    "tools",
+    "grep",
+    "utilities",
+    "binary",
+    "filter",
+    "filtering",
+    "filter text",
+    "filter lines",
+    "case",
+    "encode",
+    "decode",
+    "TextFX",
+    "Text Pastry",
+    "pastry",
+    "converter",
+    "converting",
+    "base64",
+    "urlencode",
+    "html entities",
+    "xml entities",
+    "zalgo",
+    "clipboard",
+    "faker",
+    "fake data",
+    "test data",
+    "sort",
+    "sorting",
+    "json",
+    "trim",
+    "generator",
+    "dummy file",
+    "uuid"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/locutus": "^0.0.6",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.46.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "html-entities": "^2.3.3",
+    "locutus": "^2.0.16",
+    "uuid-random": "^1.3.2"
+  }
+}
