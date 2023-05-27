@@ -2,7 +2,7 @@
   "name": "vscode-text-tools",
   "displayName": "Text Tools for VS Code",
   "description": "Swiss Army knife for text manipulation and selection",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "biati",
   "author": {
     "name": "Biati Digital",
@@ -95,12 +95,19 @@
     "onCommand:biati.texttools.nonbreakingspace",
     "onCommand:biati.texttools.addallnumbers",
     "onCommand:biati.texttools.substractallnumbers",
-    "onCommand:biati.texttools.jsonstringparse",
+    "onCommand:biati.texttools.jsonstringencode",
+    "onCommand:biati.texttools.jsonstringdecode",
+    "onCommand:biati.texttools.jsonstringserialize",
+    "onCommand:biati.texttools.jsonstringunserialize",
     "onCommand:biati.texttools.generateuuid",
     "onCommand:biati.texttools.generatedummyfile",
     "onCommand:biati.texttools.countwords",
     "onCommand:biati.texttools.countcharacters",
-    "onCommand:biati.texttools.countlines"
+    "onCommand:biati.texttools.countlines",
+    "onCommand:biati.texttools.texttomd5",
+    "onCommand:biati.texttools.texttosha1",
+    "onCommand:biati.texttools.texttosha256",
+    "onCommand:biati.texttools.texttosha512"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -206,19 +213,19 @@
         "command": "biati.texttools.urldecode"
       },
       {
-        "title": "Encode Spaces",
+        "title": "Spaces Encode",
         "command": "biati.texttools.encodespaces"
       },
       {
-        "title": "Decode Spaces",
+        "title": "Spaces Decode",
         "command": "biati.texttools.decodespaces"
       },
       {
-        "title": "Encode HTML Entities",
+        "title": "HTML Entities Encode",
         "command": "biati.texttools.encodehtml"
       },
       {
-        "title": "Decode HTML Entities",
+        "title": "HTML Entities Decode",
         "command": "biati.texttools.decodehtml"
       },
       {
@@ -232,6 +239,22 @@
       {
         "title": "Binary to Text",
         "command": "biati.texttools.binarytotext"
+      },
+      {
+        "title": "Text to MD5 Hash",
+        "command": "biati.texttools.texttomd5"
+      },
+      {
+        "title": "Text to SHA1 Hash",
+        "command": "biati.texttools.texttosha1"
+      },
+      {
+        "title": "Text to SHA256 Hash",
+        "command": "biati.texttools.texttosha256"
+      },
+      {
+        "title": "Text to SHA512 Hash",
+        "command": "biati.texttools.texttosha512"
       },
       {
         "title": "ASCII to Decimal",
@@ -395,8 +418,20 @@
         "command": "biati.texttools.substractallnumbers"
       },
       {
-        "title": "JSON String Parse",
-        "command": "biati.texttools.jsonstringparse"
+        "title": "JSON String Encode",
+        "command": "biati.texttools.jsonstringencode"
+      },
+      {
+        "title": "JSON String Decode",
+        "command": "biati.texttools.jsonstringdecode"
+      },
+      {
+        "title": "JSON String Serialize",
+        "command": "biati.texttools.jsonstringserialize"
+      },
+      {
+        "title": "JSON String Unserialize",
+        "command": "biati.texttools.jsonstringunserialize"
       },
       {
         "title": "Generate UUID",
@@ -420,216 +455,256 @@
       }
     ],
     "menus": {
+      "commandPalette": [
+        {
+          "command": "biati.texttools.jsonstringserialize",
+          "when": "false"
+        },
+        {
+          "command": "biati.texttools.jsonstringunserialize",
+          "when": "false"
+        }
+      ],
       "text-tools": [
         {
           "command": "biati.texttools.tolowercase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@1"
         },
         {
           "command": "biati.texttools.touppercase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@2"
         },
         {
           "command": "biati.texttools.tocapitalcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@3"
         },
         {
           "command": "biati.texttools.tocamelcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@4"
         },
         {
           "command": "biati.texttools.tosnakecase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@5"
         },
         {
           "command": "biati.texttools.toconstantcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@6"
         },
         {
           "command": "biati.texttools.topascalsnakecase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@7"
         },
         {
           "command": "biati.texttools.tocamelsnakecase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@8"
         },
         {
           "command": "biati.texttools.toconstantcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@9"
         },
         {
           "command": "biati.texttools.todotcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@10"
         },
         {
           "command": "biati.texttools.toheadercase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@11"
         },
         {
           "command": "biati.texttools.toheadercase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@12"
         },
         {
           "command": "biati.texttools.tonocase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@13"
         },
         {
           "command": "biati.texttools.toflatcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@14"
         },
         {
           "command": "biati.texttools.toparamcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@15"
         },
         {
           "command": "biati.texttools.toscreamingparamcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@16"
         },
         {
           "command": "biati.texttools.topascalcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@17"
         },
         {
           "command": "biati.texttools.topathcase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@18"
         },
         {
           "command": "biati.texttools.tosentencecase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
-        },
-        {
-          "command": "biati.texttools.tospongececase",
-          "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@19"
         },
         {
           "command": "biati.texttools.totitlecase",
           "when": "editorTextFocus",
-          "group": "1_casetools"
+          "group": "1_casetools@20"
+        },
+        {
+          "command": "biati.texttools.tospongececase",
+          "when": "editorTextFocus",
+          "group": "1_casetools@21"
         },
         {
           "command": "biati.texttools.tobase64",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@1"
         },
         {
           "command": "biati.texttools.decodebase64",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@2"
         },
         {
           "command": "biati.texttools.urlencode",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@3"
         },
         {
           "command": "biati.texttools.urldecode",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
-        },
-        {
-          "command": "biati.texttools.encodespaces",
-          "when": "editorTextFocus",
-          "group": "2_transformtools"
-        },
-        {
-          "command": "biati.texttools.decodespaces",
-          "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@4"
         },
         {
           "command": "biati.texttools.encodehtml",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@5"
         },
         {
           "command": "biati.texttools.decodehtml",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@6"
         },
         {
           "command": "biati.texttools.htmlasciitodecimal",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@7"
+        },
+        {
+          "command": "biati.texttools.encodespaces",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@8"
+        },
+        {
+          "command": "biati.texttools.decodespaces",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@9"
+        },
+        {
+          "command": "biati.texttools.jsonstringencode",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@10"
+        },
+        {
+          "command": "biati.texttools.jsonstringdecode",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@11"
         },
         {
           "command": "biati.texttools.texttobinary",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@14"
         },
         {
           "command": "biati.texttools.binarytotext",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@15"
         },
         {
           "command": "biati.texttools.asciitodecimal",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@16"
         },
         {
           "command": "biati.texttools.asciitohex",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@17"
         },
         {
           "command": "biati.texttools.rot13",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@18"
+        },
+        {
+          "command": "biati.texttools.texttomd5",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@18"
+        },
+        {
+          "command": "biati.texttools.texttosha1",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@18"
+        },
+        {
+          "command": "biati.texttools.texttosha256",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@18"
+        },
+        {
+          "command": "biati.texttools.texttosha512",
+          "when": "editorTextFocus",
+          "group": "2_transformtools@18"
         },
         {
           "command": "biati.texttools.stripslashes",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@19"
         },
         {
           "command": "biati.texttools.smartquotes",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@20"
         },
         {
           "command": "biati.texttools.straightenquotes",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@21"
         },
         {
           "command": "biati.texttools.quotessingletodouble",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@22"
         },
         {
           "command": "biati.texttools.quotessingletobackticks",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@23"
         },
         {
           "command": "biati.texttools.quotesdoubletosingle",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@24"
         },
         {
           "command": "biati.texttools.quotesdoubletobackticks",
           "when": "editorTextFocus",
-          "group": "2_transformtools"
+          "group": "2_transformtools@25"
         },
         {
           "command": "biati.texttools.sortalphanumerically",
@@ -788,11 +863,6 @@
         },
         {
           "command": "biati.texttools.substractallnumbers",
-          "when": "editorTextFocus",
-          "group": "9_inserttools"
-        },
-        {
-          "command": "biati.texttools.jsonstringparse",
           "when": "editorTextFocus",
           "group": "9_inserttools"
         },
