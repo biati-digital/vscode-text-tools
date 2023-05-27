@@ -3,6 +3,7 @@ import CaseTools from './case-tools';
 import CounterTools from './counter-tools';
 import EncodeDecodeTools from './encode-decode-tools';
 import GenerateTools from './generate-tools';
+import HashTools from './hash-tools';
 import InsertTools from './insert-tools';
 import JsonTools from './json-tools';
 import LinesTools from './lines-tools';
@@ -13,6 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const counterTools = new CounterTools();
 	const encodeDecodeTools = new EncodeDecodeTools();
 	const generateTools = new GenerateTools();
+	const hashTools = new HashTools();
 	const insertTools = new InsertTools();
 	const jsonTools = new JsonTools();
 	const linesTools = new LinesTools();
@@ -22,6 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 	counterTools.init(context);
 	encodeDecodeTools.init(context);
 	generateTools.init(context);
+	hashTools.init(context);
 	insertTools.init(context);
 	jsonTools.init(context);
 	linesTools.init(context);
