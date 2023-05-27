@@ -2,6 +2,18 @@
 
 All notable changes to the "vscode-text-tools" extension will be documented in this file.
 
+## 1.2.0
+
+- New: Json String Encode
+- New: Json String Decode
+- New: Text to MD5 Hash
+- New: Text to SHA1 Hash
+- New: Text to SHA256 Hash
+- New: Text to SHA512 Hash
+- Improved: Context menu items order
+- Improved: Standardized some commands names
+- Changed: Json String Parse removed in favor of Json String Decode
+
 ## 1.1.0
 
 - New: Count Words
