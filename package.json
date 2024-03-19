@@ -2,7 +2,7 @@
   "name": "vscode-text-tools",
   "displayName": "Text Tools for VS Code",
   "description": "Swiss Army knife for text manipulation and selection",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "biati",
   "author": {
     "name": "Biati Digital",
