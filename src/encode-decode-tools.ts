@@ -114,7 +114,7 @@ class EncodeDecodeTools extends VSCodeTextTools {
         for (const letter of text) {
             let decimal = Number(letter.charCodeAt(0).toString(10));
 
-            if (fn) {
+            if (fn && typeof fn === 'function') {
                 decimal = fn(decimal);
             }
 
