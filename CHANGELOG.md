@@ -2,6 +2,16 @@
 
 All notable changes to the "vscode-text-tools" extension will be documented in this file.
 
+## 1.2.2
+
+- Fixed: Screaming Snake Case renamed underlying command to avoid "duplicate" warnings in VS Code console
+- Fixed: Make Header Case renamed underlying command to avoid "duplicate" warnings in VS Code console
+- Improved: Minor code improvements
+
+## 1.2.1
+
+- Improved: Minor code improvements
+
 ## 1.2.0
 
 - New: Json String Encode
