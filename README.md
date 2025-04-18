@@ -8,14 +8,14 @@
 ### Text transform commands
 
 - Make Camel Case: `test string` becomes `testString`
-- Make Screaming Snake Case: `test string` becomes `TEST_STRING`
-  - Also available as Make Constant Case
 - Make Dot Case: `test string` becomes `test.string`
 - Make Header Case: `test string` becomes `Test-String`
   - Also available as Make Train Case
 - Make No Case: `testString` becomes `test string`
 - Make Flat Case: `testString` becomes `teststring`
 - Make Snake Case: `Test string` becomes `test_string`
+- Make Screaming Snake Case: `test string` becomes `TEST_STRING`
+  - Also available as Make Constant Case
 - Make Pascal Snake Case: `Test string` becomes `Test_String`
 - Make Camel Snake Case: `Test string` becomes `test_String`
 - Make Kebab Case: `Test string` becomes `test-string`
