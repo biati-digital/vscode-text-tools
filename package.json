@@ -2,7 +2,7 @@
   "name": "vscode-text-tools",
   "displayName": "Text Tools for VS Code",
   "description": "Swiss Army knife for text manipulation and selection",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "publisher": "biati",
   "author": {
     "name": "Biati Digital",
@@ -48,7 +48,7 @@
       },
       {
         "title": "Make Screaming Snake Case",
-        "command": "biati.texttools.toconstantcase"
+        "command": "biati.texttools.toscreamingsnakecase"
       },
       {
         "title": "Make Pascal Snake Case",
@@ -72,7 +72,7 @@
       },
       {
         "title": "Make Train Case",
-        "command": "biati.texttools.toheadercase"
+        "command": "biati.texttools.totraincase"
       },
       {
         "title": "Make No Case",
@@ -406,7 +406,7 @@
           "group": "1_casetools@5"
         },
         {
-          "command": "biati.texttools.toconstantcase",
+          "command": "biati.texttools.toscreamingsnakecase",
           "when": "editorTextFocus",
           "group": "1_casetools@6"
         },
@@ -436,7 +436,7 @@
           "group": "1_casetools@11"
         },
         {
-          "command": "biati.texttools.toheadercase",
+          "command": "biati.texttools.totraincase",
           "when": "editorTextFocus",
           "group": "1_casetools@12"
         },
